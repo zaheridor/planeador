@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <f:loadBundle basename="jago.zaheridor.planeador.resources.mensajes" var="msg"/>
+        <title><h:outputText value="#{msg.TITULO_INDEX}"></h:outputText></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div><h:outputText value="#{planeadorManagedBean.mensaje}"></h:outputText></div>
+        <h:form>
+            <h:commandButton action="#{planeadorManagedBean.cargar}" value="#{msg.BOTON_CARGA}"/>
+        </h:form>
+    </body>
+</html>
