@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <f:loadBundle basename="jago.zaheridor.planeador.resources.mensajes" var="msg"/>
+        <title><h:outputText value="#{msg.TITULO_INDEX}"></h:outputText></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="top">Futuro Header</ui:define>
+            <ui:define name="left">Futuro Menú</ui:define>
+            <ui:define name="main">
+                <h:form id="form" enctype="multipart/form-data">
+                    <h:inputFile id="file" value="#{planeadorManagedBean.archivo}"/>
+                    <h:commandButton value="Upload" action="#{planeadorManagedBean.cargaForm}"/>
+                </h:form>
+            </ui:define>
+            <ui:define name="bottom">Futuro Footer</ui:define>
+        </ui:composition>
+        
+        
+        
+        
+    </body>
+</html>
